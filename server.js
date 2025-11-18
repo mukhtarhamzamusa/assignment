@@ -1,11 +1,13 @@
 // Import Express module
 const express = require('express');
 
+require('dotenv').config();
 // Create an Express application
 const app = express();
 
 // Define a port number
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 
 // Endpoint 1: /api/name
 app.get('/api/name', (req, res) => {
